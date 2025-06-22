@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@remix-run/dev": "^2.16.8",
+    "@vitejs/plugin-react": "^4.5.2",
     "vite": "^6.3.5"
   }
 }
