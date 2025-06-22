@@ -1,9 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-
-import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
@@ -14,17 +11,11 @@ const Contact = () => {
     email: "",
     message: "",
   });
-
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
   };
 
   const handleSubmit = (e) => {
@@ -37,9 +28,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Huzaif Ahmed",
+          to_name: "Raj Srivastava",
           from_email: form.email,
-          to_email: "dev.huzaif@gmail.com",
+          to_email: "raj25oct2003@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -48,89 +39,108 @@ const Contact = () => {
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
+          setForm({ name: "", email: "", message: "" });
         },
         (error) => {
           setLoading(false);
           console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
+          alert("Something went wrong. Please try again.");
         }
       );
   };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
+    <div className='w-full flex flex-col md:flex-row gap-12 px-6 md:px-16 py-12 text-black font-sans'>
+      {/* Form Section */}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className='flex-[0.7] bg-white p-8 rounded-md border border-gray-300 shadow-sm'
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
-
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
-        >
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+        <h2 className='text-2xl font-bold mb-6 border-b pb-2'>Get in Touch</h2>
+        <form ref={formRef} onSubmit={handleSubmit} className='space-y-6'>
+          <div>
+            <label className='block text-sm font-medium mb-1'>Full Name</label>
             <input
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              placeholder='Enter your name'
+              required
+              className='w-full border border-gray-400 px-4 py-2 rounded focus:outline-none focus:ring-1 focus:ring-black'
             />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
+          </div>
+          <div>
+            <label className='block text-sm font-medium mb-1'>Email</label>
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              placeholder='Enter your email'
+              required
+              className='w-full border border-gray-400 px-4 py-2 rounded focus:outline-none focus:ring-1 focus:ring-black'
             />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+          </div>
+          <div>
+            <label className='block text-sm font-medium mb-1'>Message</label>
             <textarea
-              rows={7}
               name='message'
+              rows={5}
               value={form.message}
               onChange={handleChange}
-              placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              placeholder='Type your message here'
+              required
+              className='w-full border border-gray-400 px-4 py-2 rounded focus:outline-none focus:ring-1 focus:ring-black'
             />
-          </label>
-
+          </div>
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            className='bg-black text-white px-6 py-2 rounded hover:opacity-90 transition-all'
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </motion.div>
 
+      {/* Info Section */}
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        className='flex-[0.3] border border-gray-300 p-6 rounded-md shadow-sm bg-white h-fit'
       >
-        <EarthCanvas />
+        <h3 className='text-xl font-semibold mb-4'>Raj Srivastava</h3>
+        <ul className='text-sm space-y-3'>
+          <li>
+            <strong>Email:</strong>{" "}
+            <a href='mailto:raj25oct2003@gmail.com' className='text-blue-600'>
+              raj25oct2003@gmail.com
+            </a>
+          </li>
+          <li>
+            <strong>Phone:</strong> +91-9589436921
+          </li>
+          <li>
+            <strong>GitHub:</strong>{" "}
+            <a
+              href='https://github.com/Rajs1236'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-blue-600'
+            >
+              github.com/Rajs1236
+            </a>
+          </li>
+          <li>
+            <strong>Location:</strong> MANIT Bhopal, India
+          </li>
+          <li>
+            <strong>Roll No:</strong> 2211101133
+          </li>
+        </ul>
       </motion.div>
     </div>
   );
 };
 
 export default SectionWrapper(Contact, "contact");
+
