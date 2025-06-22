@@ -62,7 +62,7 @@ const experiences = [
   {
     title: "Volunteer - Arima Foundation",
     company_name: "ARIMA Foundation",
-    icon: github, // You can replace with an appropriate volunteer icon if you have one
+    icon: github,
     iconBg: "#E6DEDD",
     date: "Dec 2023",
     points: [
@@ -83,8 +83,8 @@ const projects = [
       { name: "MongoDB", color: "green-text-gradient" },
       { name: "ArcGIS", color: "orange-text-gradient" },
     ],
-    image: project2, // Replace with your actual image if available
-    source_code_link: "https://github.com/Rajs1236/manit-digitization", // Update with actual repo
+    image: project2,
+    source_code_link: "https://github.com/Rajs1236/manit-digitization",
   },
   {
     name: "ByteJournal",
@@ -95,8 +95,8 @@ const projects = [
       { name: "Appwrite", color: "pink-text-gradient" },
       { name: "TinyMCE", color: "purple-text-gradient" },
     ],
-    image: project3, // Replace with your actual image if available
-    source_code_link: "https://github.com/Rajs1236/bytejournal", // Update with actual repo
+    image: project3,
+    source_code_link: "https://github.com/Rajs1236/bytejournal",
   },
   {
     name: "SkillShare-style Platform",
@@ -108,9 +108,34 @@ const projects = [
       { name: "TailwindCSS", color: "pink-text-gradient" },
       { name: "Framer Motion", color: "orange-text-gradient" },
     ],
-    image: project2, // Placeholder, replace with SkillShare project image
-    source_code_link: "https://github.com/Rajs1236/skillswap", // Update with actual repo
+    image: project2,
+    source_code_link: "https://github.com/Rajs1236/skillswap",
   },
 ];
 
-export { services, technologies, experiences, projects };
+const testimonials = [
+  {
+    testimonial: "This platform helped me improve my skills and meet great mentors!",
+    name: "Amit Verma",
+    designation: "Frontend Developer",
+    company: "Google",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+  },
+  {
+    testimonial: "Thanks to SkillSwap, I landed my first freelance gig!",
+    name: "Priya Sharma",
+    designation: "UI Designer",
+    company: "Fiverr",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+  },
+  {
+    testimonial: "The real-time chat and skill matching are super useful!",
+    name: "Ravi Singh",
+    designation: "Backend Developer",
+    company: "Amazon",
+    image: "https://randomuser.me/api/portraits/men/85.jpg",
+  },
+];
+
+export { services, technologies, experiences, projects, testimonials };
+
