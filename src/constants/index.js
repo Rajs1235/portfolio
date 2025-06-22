@@ -1,22 +1,14 @@
-
 import {
-  logo,
   backend,
   creator,
   mobile,
   web,
   github,
-  menu,
-  close,
   css,
-  gearXpert,
-  project2,
-  project3,
   mysql,
   express,
   aws,
   mui,
-  
   gsap,
   framer,
   figma,
@@ -29,245 +21,96 @@ import {
   redux,
   tailwind,
   threejs,
-  firstTestimonial,
-  secondTestimonial,
-  thirdTestimonial,
-} from '../assets'
-
-
-// Import Tekisky separately
-import tekisky from "../assets/company/tekisky.png";
-
+  project2,
+  project3,
+} from '../assets';
 
 export const navLinks = [
-
-
-  {
-    id: "about",
-    title: "About",
-    
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
+  { id: "about", title: "About" },
+  { id: "work", title: "Work" },
+  { id: "contact", title: "Contact" },
 ];
 
 const services = [
-  {
-    title: "Full-Stack Developer",
-    icon: web,
-  },
-  {
-    title: "Frontend Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
-    title: "Ui UX Designer",
-    icon: creator,
-  },
+  { title: "Full-Stack Developer", icon: web },
+  { title: "Frontend Developer", icon: mobile },
+  { title: "Backend Developer", icon: backend },
+  { title: "UI/UX Designer", icon: creator },
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "gsap",
-    icon: gsap,
-  },
-  {
-    name: "framer",
-    icon: framer,
-  },
-
- 
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Material Ui",
-    icon: mui,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "Express Js",
-    icon: express,
-  },
-  {
-    name: "AWS",
-    icon: aws,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "MySql",
-    icon: mysql,
-  },
-
-  {
-    name: "git",
-    icon: git,
-  },
- 
-
+  { name: "HTML 5", icon: html },
+  { name: "CSS 3", icon: css },
+  { name: "JavaScript", icon: javascript },
+  { name: "React JS", icon: reactjs },
+  { name: "Redux Toolkit", icon: redux },
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "Material UI", icon: mui },
+  { name: "Node JS", icon: nodejs },
+  { name: "Express Js", icon: express },
+  { name: "MongoDB", icon: mongodb },
+  { name: "MySql", icon: mysql },
+  { name: "AWS", icon: aws },
+  { name: "gsap", icon: gsap },
+  { name: "framer", icon: framer },
+  { name: "Three JS", icon: threejs },
+  { name: "figma", icon: figma },
+  { name: "git", icon: git },
 ];
 
 const experiences = [
   {
-    title: "Full-Stack Developer",
-    company_name: "Tekisky",
-    icon: tekisky,
-    iconBg: "#383E56",
-    date: "Jan 2023 - present",
+    title: "Volunteer - Arima Foundation",
+    company_name: "ARIMA Foundation",
+    icon: github, // You can replace with an appropriate volunteer icon if you have one
+    iconBg: "#E6DEDD",
+    date: "Dec 2023",
     points: [
-      "Developing and maintaining web applications using MERN technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Participated as a volunteer in education drives organized by ARIMA Foundation.",
+      "Helped in providing educational and healthcare benefits to students in rural areas of U.P.",
     ],
-  },
-];
-
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Huzaif proved me wrong.",
-    name: "MD Mustaqeem",
-    designation: "Ecommerce",
-    company: "QuickMart",
-    image: firstTestimonial,
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Huzaif does.",
-    name: "Abdul Raheman",
-    designation: "Ecommerce Business",
-    company: "justbuyz",
-    image: secondTestimonial,
-  },
-  {
-    testimonial:
-      "After Huzaif optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "James Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: thirdTestimonial,
   },
 ];
 
 const projects = [
   {
-    name: "Tekisky Mart",
+    name: "Digitization of MANIT Campus",
     description:
-      "Tekisky Mart is a web-based platform that allows users to search, explore, and purchase a wide range of products from various providers, offering a seamless and efficient shopping experience.",
+      "Developed a full-stack map website using Vite, React, Node.js, MongoDB, and Google Earth Pro with ArcGIS. Built features like map layer creation and campus data visualization.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "white-text-gradient",
-      },
-      {
-        name: "node",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
- 
+      { name: "React", color: "blue-text-gradient" },
+      { name: "Node.js", color: "green-text-gradient" },
+      { name: "MongoDB", color: "green-text-gradient" },
+      { name: "ArcGIS", color: "orange-text-gradient" },
     ],
-    image: project2,
-    source_code_link: "https://github.com/",
+    image: project2, // Replace with your actual image if available
+    source_code_link: "https://github.com/Rajs1236/manit-digitization", // Update with actual repo
   },
   {
-    name: "GearXpert",
+    name: "ByteJournal",
     description:
-      "GearXpert is your ultimate destination for premium auto parts and accessories, Whether you're an automobile enthusiast or a professional, find everything you need to upgrade, repair.",
+      "Built a blog submission platform using React Hook Form, Appwrite, and TinyMCE for content creation, authentication, file storage, and media-rich editing.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "emailJs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Gsap",
-        color: "pink-text-gradient",
-      },
+      { name: "React", color: "blue-text-gradient" },
+      { name: "Appwrite", color: "pink-text-gradient" },
+      { name: "TinyMCE", color: "purple-text-gradient" },
     ],
-    image: gearXpert,
-    source_code_link: "https://github.com/",
+    image: project3, // Replace with your actual image if available
+    source_code_link: "https://github.com/Rajs1236/bytejournal", // Update with actual repo
   },
   {
-    name: "GoGroove-Ecommerce",
+    name: "SkillShare-style Platform",
     description:
-      "Go-Groove is your ultimate destination for premium products across various categories. Whether you're a savvy shopper or a professional, enhance, and simplify your lifestyle—all in one place!",
+      "Designed and built a SkillShare-style full-stack platform with user authentication, course enrollment, learning paths, progress tracking, badges, and real-time chat using MERN stack and Socket.IO.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "express",
-        color: "white-text-gradient",
-      },
-      {
-        name: "node",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
+      { name: "MERN", color: "green-text-gradient" },
+      { name: "Socket.IO", color: "blue-text-gradient" },
+      { name: "TailwindCSS", color: "pink-text-gradient" },
+      { name: "Framer Motion", color: "orange-text-gradient" },
     ],
-    image: project3,
-    source_code_link: "https://github.com/",
+    image: project2, // Placeholder, replace with SkillShare project image
+    source_code_link: "https://github.com/Rajs1236/skillswap", // Update with actual repo
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };
