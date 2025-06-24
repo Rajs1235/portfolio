@@ -15,5 +15,9 @@
     "@remix-run/dev": "^2.16.8",
     "@vitejs/plugin-react": "^4.5.2",
     "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.10",
+    "tailwindcss": "^4.1.10"
   }
 }
